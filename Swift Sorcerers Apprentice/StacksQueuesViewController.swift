@@ -8,8 +8,9 @@
 
 import UIKit
 
-class StacksViewController: UIViewController, UITextFieldDelegate {
+class StacksQueuesViewController: UIViewController, UITextFieldDelegate {
     
+    @IBOutlet var listTypeControl: UISegmentedControl
     @IBOutlet var pushNodeButton: UIButton
     @IBOutlet var pushNodeTextField: UITextField
     @IBOutlet var popNodeButton: UIButton
@@ -30,6 +31,27 @@ class StacksViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    enum ListType {
+        case Stack, Queue
+        func simpleDescription() -> String {
+            switch self {
+            case .Stack:
+                return "Stack"
+            case .Queue:
+                return "Queue"
+            }
+        }
+    }
+    
+    func currentListType() -> ListType {
+        switch self.listTypeControl.selectedSegmentIndex {
+        case 0:
+            return .Stack
+        default:
+            return .Queue
+        }
+    }
+    
     @IBAction func pushNodePressed(sender: UIButton) {
         
         var nodeValue: Int
@@ -39,14 +61,20 @@ class StacksViewController: UIViewController, UITextFieldDelegate {
             nodeValue = 0
         }
         
-        if let head = self.head {
-            //iterate to last node in stack
-            var currNode = head
-            while let nextNode = currNode.next {
-                currNode = nextNode
+        if let currHead = self.head {
+            switch self.currentListType() {
+            case ListType.Stack:
+                var newHead = ListNode(value: nodeValue)
+                newHead.next = currHead
+                self.head = newHead
+            case ListType.Queue:
+                var currNode = currHead
+                while let nextNode = currNode.next {
+                    currNode = nextNode
+                }
+                //add new node as the next of the last node
+                currNode.next = ListNode(value: nodeValue)
             }
-            //add new node as the next of the last node
-            currNode.next = ListNode(value: nodeValue)
         } else {
             //if no head set it
             self.head = ListNode(value: nodeValue)
@@ -65,7 +93,7 @@ class StacksViewController: UIViewController, UITextFieldDelegate {
             }
             textView.text = textView.text + "\n\(self.wholeStack())\nEND"
         } else {
-            textView.text = textView.text + "\nNothing to Pop!"
+            textView.text = textView.text + "\nNothing to Pop/Dequeue!"
             popNodeLabel.text = "N/A"
         }
     }

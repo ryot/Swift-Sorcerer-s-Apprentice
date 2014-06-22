@@ -57,10 +57,10 @@
             </objects>
             <point key="canvasLocation" x="1416" y="198"/>
         </scene>
-        <!--Stacks View Controller-->
+        <!--Stacks Queues View Controller-->
         <scene sceneID="Dc0-V7-BdW">
             <objects>
-                <viewController storyboardIdentifier="stacksVC" id="Fdr-yY-ER6" customClass="StacksViewController" customModule="Swift_Sorcerers_Apprentice" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="stacksQueuesVC" id="Fdr-yY-ER6" customClass="StacksQueuesViewController" customModule="Swift_Sorcerers_Apprentice" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Lli-9r-O3H"/>
                         <viewControllerLayoutGuide type="bottom" id="X3n-om-9GP"/>
@@ -74,16 +74,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="54" y="77" width="97" height="30"/>
+                                    <rect key="frame" x="44" y="86" width="97" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="47" y="117" width="97" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzL-57-9Lt">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Pop Node">
+                                <state key="normal" title="Remove">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="207" y="115" width="81" height="30"/>
+                                    <rect key="frame" x="207" y="124" width="81" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="178" y="155" width="133" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="popNodePressed:" destination="Fdr-yY-ER6" eventType="touchUpInside" id="KgA-tf-yKn"/>
@@ -95,28 +101,50 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="200" y="86" width="108" height="20.5"/>
+                                    <rect key="frame" x="207" y="95" width="108" height="20.5"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="203" y="121" width="108" height="20.5"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOE-L7-ZiQ">
                                 <rect key="frame" x="205" y="98" width="70" height="30"/>
-                                <state key="normal" title="Push Node">
+                                <state key="normal" title="Add">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="57" y="115" width="91" height="30"/>
+                                    <rect key="frame" x="47" y="124" width="91" height="30"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="33" y="155" width="124" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="pushNodePressed:" destination="Fdr-yY-ER6" eventType="touchUpInside" id="gQo-39-c7h"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Gy9-7A-fja">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Stack"/>
+                                    <segment title="Queue"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="41" width="123" height="29"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="77" width="133.5" height="29"/>
+                                </variation>
+                            </segmentedControl>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Stack Print" translatesAutoresizingMaskIntoConstraints="NO" id="0AT-vV-A5I">
                                 <rect key="frame" x="44" y="136" width="405" height="324"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="20" y="153" width="280" height="365"/>
+                                    <rect key="frame" x="20" y="162" width="280" height="365"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="20" y="193" width="280" height="458"/>
                                 </variation>
                                 <connections>
                                     <outlet property="delegate" destination="Fdr-yY-ER6" id="MxB-pE-85x"/>
@@ -129,16 +157,21 @@
                             <mask key="subviews">
                                 <exclude reference="zzL-57-9Lt"/>
                                 <exclude reference="iFg-2z-J5V"/>
+                                <exclude reference="Gy9-7A-fja"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="zzL-57-9Lt"/>
                                 <include reference="iFg-2z-J5V"/>
+                                <include reference="Gy9-7A-fja"/>
                             </mask>
                         </variation>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="640"/>
                     <connections>
+                        <outlet property="listTypeControl" destination="Gy9-7A-fja" id="zmM-cO-mBY"/>
                         <outlet property="popNodeButton" destination="zzL-57-9Lt" id="KEP-4C-th7"/>
                         <outlet property="popNodeLabel" destination="iFg-2z-J5V" id="Jgj-Ox-Y3o"/>
                         <outlet property="pushNodeButton" destination="gOE-L7-ZiQ" id="8Cg-Sv-2bH"/>
@@ -148,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="85J-rU-HHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2023.5" y="220"/>
+            <point key="canvasLocation" x="2023.5" y="219.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VP4-Ly-Z0M">

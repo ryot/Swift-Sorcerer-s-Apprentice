@@ -10,7 +10,7 @@
 		FA6170A919569C9E001F33BB /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6170A819569C9E001F33BB /* Node.swift */; };
 		FA6170AE19569CF0001F33BB /* ListNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6170AD19569CF0001F33BB /* ListNode.swift */; };
 		FA6170B019569CFB001F33BB /* TreeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6170AF19569CFB001F33BB /* TreeNode.swift */; };
-		FA6170B41956A5CC001F33BB /* StacksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6170B31956A5CC001F33BB /* StacksViewController.swift */; };
+		FA6170B41956A5CC001F33BB /* StacksQueuesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6170B31956A5CC001F33BB /* StacksQueuesViewController.swift */; };
 		FA6C0EB419568E9B004509FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C0EB319568E9B004509FB /* AppDelegate.swift */; };
 		FA6C0EB619568E9B004509FB /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C0EB519568E9B004509FB /* RootViewController.swift */; };
 		FA6C0EB919568E9B004509FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C0EB719568E9B004509FB /* Main.storyboard */; };
@@ -32,7 +32,7 @@
 		FA6170A819569C9E001F33BB /* Node.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
 		FA6170AD19569CF0001F33BB /* ListNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNode.swift; sourceTree = "<group>"; };
 		FA6170AF19569CFB001F33BB /* TreeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreeNode.swift; sourceTree = "<group>"; };
-		FA6170B31956A5CC001F33BB /* StacksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StacksViewController.swift; sourceTree = "<group>"; };
+		FA6170B31956A5CC001F33BB /* StacksQueuesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StacksQueuesViewController.swift; sourceTree = "<group>"; };
 		FA6C0EAE19568E9B004509FB /* Swift Sorcerers Apprentice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift Sorcerers Apprentice.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6C0EB219568E9B004509FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA6C0EB319568E9B004509FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 			children = (
 				FA6C0EB319568E9B004509FB /* AppDelegate.swift */,
 				FA6C0EB519568E9B004509FB /* RootViewController.swift */,
-				FA6170B31956A5CC001F33BB /* StacksViewController.swift */,
+				FA6170B31956A5CC001F33BB /* StacksQueuesViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -249,7 +249,7 @@
 				FA6C0EB419568E9B004509FB /* AppDelegate.swift in Sources */,
 				FA6170B019569CFB001F33BB /* TreeNode.swift in Sources */,
 				FA6170AE19569CF0001F33BB /* ListNode.swift in Sources */,
-				FA6170B41956A5CC001F33BB /* StacksViewController.swift in Sources */,
+				FA6170B41956A5CC001F33BB /* StacksQueuesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

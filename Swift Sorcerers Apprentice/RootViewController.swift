@@ -11,7 +11,7 @@ import UIKit
 class RootViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var tableView: UITableView
-    var tasks: String[] = ["Stacks", "Queues", "Binary Tree", "Binary Search Tree", "Hash Table"]
+    var tasks: String[] = ["Stacks & Queues", "Binary Trees", "Hash Tables"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +40,8 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         let taskString = self.tasks[indexPath.row]
         
         switch taskString {
-        case "Stacks":
-            newVC = self.storyboard.instantiateViewControllerWithIdentifier("stacksVC") as? UIViewController
+        case "Stacks & Queues":
+            newVC = self.storyboard.instantiateViewControllerWithIdentifier("stacksQueuesVC") as? UIViewController
         default:
             newVC = nil
         }
